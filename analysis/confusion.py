@@ -14,9 +14,9 @@ import torch
 from torch.utils.data import DataLoader
 from transformers import AutoTokenizer
 
-from .config import ModelConfig
-from .data import SentimentDataset, collate_batch, load_data_file
-from .model import SoftLogicViBERT
+from ..core.config import ModelConfig
+from ..data_utils.data import SentimentDataset, collate_batch, load_data_file
+from ..core.model import SoftLogicViBERT
 
 
 def _load_checkpoint(

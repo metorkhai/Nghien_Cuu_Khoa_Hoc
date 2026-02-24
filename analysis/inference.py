@@ -17,9 +17,9 @@ from pathlib import Path
 import torch
 from transformers import AutoTokenizer
 
-from .config import ModelConfig
-from .model import SoftLogicViBERT
-from .utils import (
+from ..core.config import ModelConfig
+from ..core.model import SoftLogicViBERT
+from ..data_utils.utils import (
     extract_prag_features,
     visualize_token_masks,
     format_rule_activations,

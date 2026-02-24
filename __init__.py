@@ -35,10 +35,10 @@ __version__ = "1.0.0"
 __author__ = "Research Team"
 
 # Core model
-from .model import SoftLogicViBERT
+from .core.model import SoftLogicViBERT
 
 # Configuration
-from .config import (
+from .core.config import (
     ModelConfig,
     TrainConfig,
     ExperimentConfig,
@@ -50,7 +50,7 @@ from .config import (
 )
 
 # Data utilities
-from .data import (
+from .data_utils.data import (
     SentimentDataset,
     InferenceDataset,
     load_data_file,
@@ -61,7 +61,7 @@ from .data import (
 )
 
 # Inference
-from .inference import (
+from .analysis.inference import (
     SentimentPredictor,
     load_model,
     predict_single,
@@ -70,7 +70,7 @@ from .inference import (
 )
 
 # Metrics
-from .metrics import (
+from .core.metrics import (
     multilabel_f1,
     multilabel_metrics,
     evaluate_model,
@@ -78,7 +78,7 @@ from .metrics import (
 )
 
 # Losses
-from .losses import (
+from .core.losses import (
     FocalLoss,
     AsymmetricLoss,
     LabelSmoothingBCE,
@@ -87,7 +87,7 @@ from .losses import (
 )
 
 # Utilities
-from .utils import (
+from .data_utils.utils import (
     set_seed,
     ensure_list,
     build_label_map,
@@ -97,14 +97,14 @@ from .utils import (
 )
 
 # Interpretability
-from .interpretability import (
+from .analysis.interpretability import (
     ModelInterpreter,
     InterpretabilityResult,
     create_interpreter,
 )
 
 # Pretraining
-from .pretrain import (
+from .training.pretrain import (
     PretrainConfig,
     SlangDictionary,
     SlangAwareDataset,

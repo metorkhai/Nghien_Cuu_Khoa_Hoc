@@ -23,8 +23,8 @@ from torch.utils.data import DataLoader
 from torch.cuda.amp import GradScaler, autocast
 from transformers import AutoTokenizer, get_linear_schedule_with_warmup, get_cosine_schedule_with_warmup
 
-from .config import ModelConfig, TrainConfig, ExperimentConfig, get_ablation_configs
-from .data import (
+from ..core.config import ModelConfig, TrainConfig, ExperimentConfig, get_ablation_configs
+from ..data_utils.data import (
     SentimentDataset,
     load_data_file,
     load_hf_dataset,
@@ -33,10 +33,10 @@ from .data import (
     load_and_prepare_data,
     load_slang_lexicon,
 )
-from .losses import SoftLogicLoss, compute_pos_weight
-from .metrics import multilabel_f1, multilabel_metrics, evaluate_model, find_optimal_threshold
-from .model import SoftLogicViBERT
-from .utils import (
+from ..core.losses import SoftLogicLoss, compute_pos_weight
+from ..core.metrics import multilabel_f1, multilabel_metrics, evaluate_model, find_optimal_threshold
+from ..core.model import SoftLogicViBERT
+from ..data_utils.utils import (
     build_label_map,
     ensure_list,
     build_tfidf_cache,

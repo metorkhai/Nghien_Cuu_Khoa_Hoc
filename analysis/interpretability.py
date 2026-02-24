@@ -17,9 +17,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from .config import ModelConfig
-from .model import SoftLogicViBERT
-from .utils import extract_prag_features, normalize_vietnamese_text
+from ..core.config import ModelConfig
+from ..core.model import SoftLogicViBERT
+from ..data_utils.utils import extract_prag_features, normalize_vietnamese_text
 
 
 @dataclass

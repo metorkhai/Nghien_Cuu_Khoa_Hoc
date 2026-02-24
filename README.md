@@ -315,20 +315,17 @@ python -m softlogic_vibert.train \
 
 ## Cấu trúc Dự án
 
-```
-softlogic_vibert/
-├── __init__.py          # Khai báo package
-├── config.py            # Các dataclass cấu hình
-├── model.py             # Mô hình SoftLogicViBERT cốt lõi
-├── train.py             # Kịch bản huấn luyện
-├── inference.py         # Kịch bản dự đoán
-├── losses.py            # Các hàm loss tùy chỉnh
-├── metrics.py           # Các độ đo đánh giá
-├── data.py              # Các tiện ích tải dữ liệu
-├── utils.py             # Các hàm trợ giúp
-├── ablation.py          # Trình chạy nghiên cứu bóc tách
-├── interpretability.py  # Công cụ phân tích mô hình
-└── README.md            # File này
+```text
+TuanPhatModel/
+├── core/                # Bộ não của mô hình (Model, Config, Loss, Metrics)
+├── data_utils/          # Xử lý dữ liệu (Data Loading, Text Utils)
+├── training/            # Quy trình huấn luyện (Train, Pretrain, Ablation)
+├── analysis/            # Dự đoán & Giải thích (Inference, Interpretation, Confusion)
+├── data/                # Chứa dữ liệu CSV, JSON và TF-IDF cache
+├── outputs/             # Chứa checkpoints và kết quả train
+├── README.md            # Tài liệu dự án
+├── requirements.txt     # Các thư viện cần thiết
+└── .gitignore           # Các file cần bỏ qua khi đẩy lên Git
 ```
 
 ## Các Checkpoint đã Lưu

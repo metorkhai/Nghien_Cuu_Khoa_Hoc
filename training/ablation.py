@@ -20,8 +20,8 @@ from typing import Dict, List, Optional, Tuple
 
 import torch
 
-from .config import ModelConfig, TrainConfig, get_ablation_configs
-from .utils import set_seed
+from ..core.config import ModelConfig, TrainConfig, get_ablation_configs
+from ..data_utils.utils import set_seed
 
 
 # ============================================================================
@@ -115,7 +115,7 @@ def run_single_ablation(
     
     # Build command
     cmd = [
-        sys.executable, "-m", "softlogic_vibert.train",
+        sys.executable, "-m", "softlogic_vibert.training.train",
         "--output-dir", exp_dir,
         "--experiment-name", experiment_name,
     ]
