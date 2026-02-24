@@ -1,0 +1,16 @@
+# SoftLogic ViBERT Requirements
+
+# Core dependencies
+torch>=1.10.0
+transformers>=4.20.0
+numpy>=1.20.0
+
+# Optional: HuggingFace datasets support
+datasets>=2.0.0
+
+# Optional: Progress bars and logging
+tqdm>=4.60.0
+
+# Optional: Experiment tracking
+# wandb>=0.12.0
+# tensorboard>=2.8.0
